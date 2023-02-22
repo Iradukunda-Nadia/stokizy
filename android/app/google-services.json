@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "788128692183",
+    "firebase_url": "https://fir-shopper-cebc5.firebaseio.com",
+    "project_id": "fir-shopper-cebc5",
+    "storage_bucket": "fir-shopper-cebc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788128692183:android:209fb0a283ea83269c3d92",
+        "android_client_info": {
+          "package_name": "com.example.inventory_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788128692183-3a34tg6trarq9j29409mof1srp1uma5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwAJJgqXjduj48qi7U791ISGw7VaQ6C1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788128692183-3a34tg6trarq9j29409mof1srp1uma5h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "788128692183-o0ch0r8od3sb55efet802c1vfh5sre91.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nadia.inventory"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788128692183:android:a746d09e8418baba9c3d92",
+        "android_client_info": {
+          "package_name": "com.nadia.inventory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788128692183-3a34tg6trarq9j29409mof1srp1uma5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwAJJgqXjduj48qi7U791ISGw7VaQ6C1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788128692183-3a34tg6trarq9j29409mof1srp1uma5h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "788128692183-o0ch0r8od3sb55efet802c1vfh5sre91.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nadia.inventory"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
