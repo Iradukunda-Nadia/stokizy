@@ -621,9 +621,9 @@ class _SOFState extends State<SOF> {
 
         }, SetOptions(merge: true));
         if (itemTECs[i].text == 'Boots' || itemTECs[i].text == 'Torch' || itemTECs[i].text == 'Torche' ){
+          final String docID = '${widget.id}-${DateFormat('yyyy-MM-dd').format(DateTime.now())}';
           FirebaseFirestore.instance.collection('deductions')
-              .doc(
-              '${widget.id}-${DateFormat('yyyy-MM-dd').format(DateTime.now())}')
+              .doc(docID)
               .set({
             'date': DateFormat('yyyy-MM-dd').format(DateTime.now()),
             'timestamp': DateTime.now(),
@@ -634,8 +634,7 @@ class _SOFState extends State<SOF> {
 
           }, SetOptions(merge: true));
           FirebaseFirestore.instance.collection('deductions')
-              .doc(
-              '${widget.id}-${DateFormat('yyyy-MM-dd').format(DateTime.now())}')
+              .doc(docID)
               .update({
             'Items.${itemTECs[i].text}': FieldValue.increment(
                 int.parse(qtTECs[i].text)),
