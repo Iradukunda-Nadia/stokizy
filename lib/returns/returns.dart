@@ -499,13 +499,18 @@ class _DetailsState extends State<Details> {
     CollectionReference ref = FirebaseFirestore.instance
         .collection('inStock');
 
+    CollectionReference deductions = FirebaseFirestore.instance
+        .collection('deductions');
+
     Uint8List? data = await _controller.toPngBytes();
     final tempDir = await getTemporaryDirectory();
     final file = await File('${tempDir.path}/sign.jpg').create();
     file.writeAsBytesSync(data!);
     String bs64 = base64Encode(data);
 
+
     for (int i = 0; i < cards.length; i++) {
+      //return to stock
       QuerySnapshot eventsQuery = await ref.where('company', isEqualTo: userCompany).where(
           'item', isEqualTo: itemTECs[i].text).get();
 
@@ -513,6 +518,14 @@ class _DetailsState extends State<Details> {
         msgDoc.reference.update(
             {'count': FieldValue.increment(int.parse(qtTECs[i].text))});
       });
+
+      //delete deductions
+      deductions.doc(widget.docID)
+          .update({
+        'Items.${itemTECs[i].text}': FieldValue.increment(
+            -(int.parse(qtTECs[i].text))),
+      });
+
       FirebaseFirestore.instance.collection('issuance')
           .doc(widget.docID)
           .update({

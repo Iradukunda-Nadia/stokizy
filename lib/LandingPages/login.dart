@@ -101,7 +101,7 @@ class _LoginState extends State<Login> {
                     child: TextFormField(
                       maxLines: 1,
                       obscureText: isHidden,
-                      obscuringCharacter: '✱',
+                      obscuringCharacter: '*',
                       autofocus: false,
                       style: const TextStyle(
                         fontWeight: FontWeight.w500,

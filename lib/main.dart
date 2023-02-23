@@ -24,6 +24,7 @@ void main() async{
     runApp(RootRestorationScope(
       restorationId: 'root',
       child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Inventory',
           theme: ThemeData(
             primaryColor: const Color(
@@ -42,6 +43,7 @@ void main() async{
       },
       appRunner: () => runApp(
         MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'Inventory',
             theme: ThemeData(
               primaryColor: const Color(

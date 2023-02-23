@@ -60,11 +60,14 @@ class _InStockState extends State<InStock> {
       appBar: AppBar(title: const Text("Items In Stock"), centerTitle: true,
 
         actions: <Widget>[
-          IconButton(
-              onPressed: () {
-                Navigator.of(context).push(CupertinoPageRoute(
-                    builder: (context) => const StockReport()));},
-              icon: const Icon(Icons.folder, size: 30,))
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(CupertinoPageRoute(
+                      builder: (context) => const StockReport()));},
+                icon: const Icon(Icons.folder, size: 30,)),
+          )
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

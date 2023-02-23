@@ -228,7 +228,7 @@ class _StockReportState extends State<StockReport> {
             DataCell(Row(
               children: [
                 const VerticalDivider(),
-                Text(doc["Item"],
+                Text(doc["item"],
                   style: const TextStyle(fontSize: 12.0),),
               ],
             )),
